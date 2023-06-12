@@ -418,7 +418,7 @@ li{
 .input-control {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 0px;
 }
 
 .input-control input {
@@ -514,7 +514,6 @@ input[type="text"] {
   border: 2px solid red;
   background:#fff;
   padding: 10px;
-  margin-bottom: 30px;
   border-radius: 15px;
   transition: border 0.3s linear;
   }
