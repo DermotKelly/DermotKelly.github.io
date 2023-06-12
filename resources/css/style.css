@@ -1,0 +1,891 @@
+/********************************
+Reset default values on webpage
+*********************************/
+*{box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*********************************
+Set page background image
+**********************************/
+
+body {background-image:linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.6)),url(../images/oldtrafford1.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+height: 100vh;
+width: 100%;}
+
+/*********************************
+ Style wrapper for page content
+ ********************************/
+ .wrapper{background-color: red;
+          margin: auto;
+          width: 70%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          }
+/*********************************
+ Header Section CSS
+ ********************************/
+
+.header {height: auto; 
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          align-items: center;
+          background: linear-gradient(black,red);
+          color: white;
+          grid-column: 1/6;
+          grid-row: 1/2;
+          margin: auto 0;
+          font-size: 2.8vw;}
+
+/*********************************
+ Navigation Section CSS BEGINS
+ ********************************/
+
+.navigation {background-color: black;  
+              margin: 0; 
+              height: auto; 
+              align-items: center;
+              justify-content: space-between;
+              padding: 15px;flex-direction:row;
+              display:grid;
+              grid-column: 1/6;
+              grid-row: 2/3;
+              }
+
+.navigation .links{display:flex;
+              text-decoration: none;
+              text-transform: uppercase;
+              list-style: none; 
+              font-weight: 800;
+              }
+
+.navigation .links li{padding: 15px 25px 15px 25px; 
+                      align-items: center;
+                      text-decoration: none;
+                      cursor: pointer;}
+
+.navigation .links li a {list-style: none; 
+                        text-decoration: none;
+                        color: white;
+                        }
+
+.navigation .links li a:hover{border-bottom: 3px solid #f0f0f0;
+                              transition: 0.5s ease-in;
+                              }
+
+
+.navigation .links li a:active {color: red;
+                                transition: 0.9s;
+                                }
+
+/*********************************
+ Navigation Section CSS ENDS
+ ********************************/
+
+/*******************************
+ Carousel Slider CSS Starts
+ *******************************/
+ .carousel {
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
+    display: grid;
+    grid-column: 1/6;
+    grid-row: 3/4;
+  }
+  
+  .carousel .carousel__item,
+  .carousel .carousel__item--hidden {
+    display: none;
+  }
+  
+  .carousel .carousel__item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .carousel .carousel__item--visible {
+    display: grid;
+    animation: fadeVisibility 0.5s;
+  }
+  
+  .carousel .carousel__actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel .carousel__actions button {
+    border-radius: 50px;
+    background-color: red;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+  
+  
+  .carousel .carousel__actions button#carousel__button--prev:hover, .carousel .carousel__actions button#carousel__button--next:hover {
+    background-color: white;
+  }
+  
+  @keyframes fadeVisibility {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;}
+  }
+
+/********************************
+ Carousel CSS ends
+ *******************************/
+
+
+/*******************************
+ Style Quote Container
+ *******************************/
+
+.container {
+    margin: auto;
+    padding:20px;
+    background-color: white;
+    height: auto;
+    min-height: 250px;
+    margin: 20px;
+    align-items: center;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px;
+    grid-column: 2/5;
+    grid-row: 4/5;
+    }
+
+.container h2{color: red;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;}
+
+.container #new-quote {
+    background-color: red;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    
+    }
+
+.container #new-quote:hover {
+    background-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    }
+
+.main-content {
+    width: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px 0px;
+    box-shadow: 0 0 10px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    }
+
+.main-content .text-area {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px;
+    
+    }
+
+.main-content .person {
+    font-size: 1.6rem;
+    color: red;
+    text-transform: uppercase;
+    margin: 30px 30px;
+    text-align: center;
+    }
+
+.button-area button {
+    background-color: #262626;
+    color:#fff;
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/*******************************
+ Style Form for DIV Update
+ *******************************/
+
+#enter{
+  border-radius: 15px;
+  border:  2px solid black;
+  background-color: red;
+  color: white;
+  margin: auto;
+  padding:15px 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+#username{
+  border-radius: 15px;
+  border:  2px solid black;
+  padding: 10px;
+}
+#result{
+  border: 2px solid black;
+  height: 200px;
+  width: 100%;
+  border-radius: 15px;
+  border:  2px solid black;
+}
+
+/*******************************
+ End of Sytling for Form for DIV Update
+ *******************************/
+
+/*******************************
+ Style Sidebar Container
+ *******************************/
+.sidebar{
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  min-width: 200px;
+  list-style: none;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 0 0 10px;
+  margin: 20px;
+  padding: 5px 10px;
+  align-items:first baseline;
+  font-size: 1em;
+  }
+
+.sidebar ul li{
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  cursor: pointer;
+  }
+
+.sidebar ul li a:hover{
+  border-bottom: 3px solid #f0f0f0;
+  transition: 0.5s ease-in;
+  }
+
+ul li img{height: 20px;
+  margin-right: 10px;}
+
+ul li p{
+  white-space: nowrap;
+}
+
+.sidebar ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+li{
+  margin-bottom: 20px;
+  align-items:flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.items{
+  display: flex;
+  justify-content: left;
+  vertical-align: bottom;
+
+}
+
+.items img{height: 20px;}
+
+/*******************************
+ Style Sidebar Container ENDS
+ *******************************/
+
+ /*******************************
+ Style Advert Sidebar
+ *******************************/
+
+.advert{
+  background-color: white;
+  height: auto;
+  list-style: none;
+  grid-column: 5/6;
+  grid-row: 4/5;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 0 0 10px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  }
+
+.advertimg {
+  width: 100%;
+  min-width: 80px;
+  max-width: 120px;
+}
+
+/*******************************
+ Style Advert Sidebar ENDS
+ *******************************/
+
+ /*******************************
+ Style Footer
+ *******************************/
+    
+.footer {background: linear-gradient(black, red);
+    display:grid;
+    grid-column: 1/5;
+    grid-row: 6/7;
+    flex-direction: row;
+    height: 100px;
+    flex: 1 1 100%;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;}
+
+/*******************************
+ Style Footer ENDS
+ *******************************/
+
+.logo{padding: 15px;}
+
+.caption {color: grey;}
+
+/*******************************
+ Style Form
+ *******************************/
+
+#form label {display: none;}
+
+#form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#form button:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.input-control input {
+  
+	border-radius: 15px;
+	display: inline-block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+    background-color: whitesmoke;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+    background-color: #09c372;
+    color: #f0f0f0;
+}
+
+#username.success {
+  border-color: #09c372;
+  background-color: #09c372;
+  color: #f0f0f0;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: red;
+    font-size: 12px;
+    height: 20px;
+    text-align: left;
+    
+}
+
+label {width: 100px;
+display: inline-block;}
+
+#username, #email, #password, #password2{
+  border-color: red;
+}
+
+/*******************************
+ Style Form ENDS
+ *******************************/
+
+/*******************************
+ Style Add Div 
+ *******************************/
+.div-shadow{
+  width:80%;
+  height: 2em;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  margin:auto;
+}
+
+.btn-add{
+  margin: auto;
+  background-color: red;
+  border: 2px solid black;
+  padding: 10px 15px;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+/*******************************
+ Style Add Div End
+ *******************************/
+
+/*******************************
+ Style Add team to list
+ *******************************/
+
+h1 {
+  font-size: 24px;
+  font-weight: 300;
+  }
+
+p {
+  margin: 0 0 15px;
+  }
+
+input[type="text"] {
+  width: 100%;
+  height: 40px;
+  border: 2px solid red;
+  background:#fff;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  transition: border 0.3s linear;
+  }
+
+
+input[type="text"]:focus {
+  border-color: black;
+  outline: none;
+  background-color: whitesmoke;
+}
+
+.btn-primary {
+  background: red;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s linear;
+}
+
+.btn-primary:hover {
+  background: black;
+  color: white;
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s linear, color 0.3s linear;
+}
+
+.btn-icon:focus {
+  outline: none;
+}
+
+.btn-icon:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.btn-icon.remove:before {
+  content: '\f2ed';
+}
+
+.btn-icon.down:before {
+  content: '\f063';
+}
+
+.btn-icon.up:before {
+  content: '\f062';
+}
+
+
+.todoBlock {
+  padding: 30px;
+  margin: 30px 0;
+  background: #fff;
+  
+}
+
+.todoBlock .titleHolder {
+  margin: 0 0 30px;
+}
+
+/* Team list holder */
+
+.listHolder li {
+  counter-increment: step-counter;
+  overflow: hidden;
+  padding: 0 0 20px 30px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content:start;
+}
+
+.listHolder li:before {
+  content: counter(step-counter);
+  background: red;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+
+.listHolder .listName {
+  float: left;
+}
+
+.listHolder .btn-icon {
+  float: right;
+  margin: 0 0 0 20px;
+}
+
+
+.formHolder {
+  margin: 0 -5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.formHolder .col {
+  float: left;
+  width: 20%;
+  padding: 0 5px;
+}
+
+.formHolder .col.big {
+  width: 60%;
+}
+/*******************************
+ Style Add team to list End
+ *******************************/
+
+/*******************************
+ Style Footer
+ *******************************/
+
+/**********************
+New Add Team
+**********************/
+#page-banner{
+    background: red;
+    padding: 10px 0;
+}
+#page-banner h1, #page-banner p{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+}
+#page-banner input{
+    width: 90%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #444;
+}
+#team-list, #add-team, #tabbed-content{
+    margin: 30px;
+}
+#team-list ul, #tabbed-content ul{
+    list-style-type: none;
+    padding: 0;
+}
+#team-list li{
+    padding: 20px;
+    border-left: 5px solid red;
+    margin: 20px 10px;
+    text-align: left;
+}
+#team-list li:hover{
+    border-color: black;
+}
+.delete{
+    float: right;
+    background: red;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+.delete:hover{
+    background: #333;
+}
+#add-team{
+    width: auto;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#add-team input{
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 300px;
+    float: left;
+    clear: both;}
+
+#hide{
+  display:flex;
+  flex-direction: row;
+}
+
+#add-team button{
+    border: 1px solid #2f223a;
+    background: #2f223a;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+    margin: 20px 0;
+    border-left: 0;
+    color: white;
+}
+#add-team:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#add-team #hide{
+  width: 30px;
+}
+#add-team label{
+  line-height: 52px;
+}
+#tabbed-content li{
+    display: inline-block;
+    padding: 10px 14px;
+    background: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#tabbed-content .panel{
+    display: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+#tabbed-content .panel.active{
+    display: block;
+}
+/**********************
+New Add Team End
+**********************/
+
+/**********************
+Style Footer
+**********************/
+
+.footer {background: linear-gradient(black, red);
+  grid-column: 1/6;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  flex: 1 1 100%;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.footer .footer-email a {color:white;
+text-decoration: none;}
+
+.footer .footer-email a:hover {color:yellow;
+  text-decoration: none;}
+
+.logo{padding: 15px;}
+
+
+.caption {color: grey;}
+
+/**********************
+Style Footer ENDS
+**********************/
+
+
+/**********************
+Tablet Settings
+**********************/
+@media (min-width: 769px) and (max-width:1024px)
+{
+
+.wrapper{width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;}
+
+.header-text{font-size: 2rem}
+
+.container{
+  min-width: 500px;
+}
+
+.advert{grid-column: 1/4;
+grid-row: 5/6;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+margin-bottom: 30px;
+
+}
+} 
+
+/**********************
+Tablet Settings ENDS
+**********************/
+
+/**********************
+Mobile Settings
+**********************/
+@media (min-width: 320px) and (max-width:768px)
+{
+.wrapper{width: 100%;
+display: grid;
+margin: auto;
+grid-template-columns: 1fr;}
+
+.header-text{font-size: 2rem;
+margin-bottom: 10px;
+text-align: center;
+}
+
+.header {flex-direction: column;
+  height: auto;}
+
+.navigation .links {
+  grid-column: 1/5;
+display: flex;
+flex-direction: column;
+}
+
+.sidebar{display: none;}
+
+.container{grid-column: 1/5;
+  grid-row: 4/5;
+
+}
+
+.navigation .links li{padding: 2px;}
+
+.navigation {flex-direction:column;
+  align-content: center;
+text-align: center;}
+
+.advert{grid-column: 1/5;
+grid-row: 5/6;
+display: flex;
+flex-direction: column;
+margin-bottom:15px;}
+
+.footer{grid-column: 1/5;
+grid-row: 6/7;
+display: flex;
+flex-direction: column;
+text-align: center;}
+}
+
+/**********************
+Mobile Settings ENDS
+**********************/
